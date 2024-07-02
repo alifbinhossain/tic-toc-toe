@@ -18,7 +18,7 @@ const Cell: React.FC<{
         dimension === 3 && 'size-20 md:size-32 xl:size-40',
         dimension === 4 && 'size-16 md:size-28 xl:size-36',
         dimension === 5 && 'size-16 md:size-24 xl:size-32',
-        dimension === 6 && 'size-16 md:size-20 xl:size-28',
+        dimension === 6 && 'size-12 md:size-20 xl:size-28',
         winnerPattern
           ? winnerPattern.includes(index)
             ? 'bg-lime-500 text-white'

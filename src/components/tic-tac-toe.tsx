@@ -18,7 +18,7 @@ const TicTacToe = () => {
 
   return (
     <div className='pt-8  md:pt-12 xl:pt-20  flex flex-col gap-8 md:gap-20'>
-      <div className='px-8 '>
+      <div className=''>
         <div className='size-fit relative mx-auto'>
           {play && !winner?.name ? null : (
             <div className='absolute inset-0 z-50 bg-white/20'></div>
@@ -47,25 +47,29 @@ const TicTacToe = () => {
           </div>
         </div>
 
-        {winner?.name && (
-          <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
-            Congratulations{' '}
-            {winner.name === 'x' ? players?.['player1'] : players?.['player2']}!
-            Click the restart button to play again.. 😎
-          </p>
-        )}
+        <div className='px-8'>
+          {winner?.name && (
+            <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
+              Congratulations{' '}
+              {winner.name === 'x'
+                ? players?.['player1']
+                : players?.['player2']}
+              ! Click the restart button to play again.. 😎
+            </p>
+          )}
 
-        {!play && (
-          <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
-            Let's configure the settings and start playing. ⬇️⏬
-          </p>
-        )}
+          {!play && (
+            <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
+              Let's configure the settings and start playing. ⬇️⏬
+            </p>
+          )}
 
-        {isDraw && (
-          <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
-            Draw! 🎉 Click the restart button to play again.. 😎
-          </p>
-        )}
+          {isDraw && (
+            <p className='mt-8 italic font-medium text-sm text-indigo-600 text-center'>
+              Draw! 🎉 Click the restart button to play again.. 😎
+            </p>
+          )}
+        </div>
       </div>
 
       <Settings
