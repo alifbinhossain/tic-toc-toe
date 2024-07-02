@@ -1,3 +1,6 @@
+import { RxCross1 } from 'react-icons/rx';
+import { TbCircle } from 'react-icons/tb';
+
 interface IProps {
   reset: () => void;
   dimension: number;
@@ -40,11 +43,19 @@ const Settings = ({
           </select>
         </div>
 
-        <div className='flex items-center gap-2'>
-          <p className='w-20'>Player 1 :</p>
+        <div className='flex  items-center gap-2'>
+          <p className='w-32 flex items-center gap-1'>
+            <span> Player 1</span>
+            <span className='flex items-center text-indigo-600 font-medium'>
+              {' ('}
+              <RxCross1 />
+              {')'}
+            </span>{' '}
+            :
+          </p>
           {play ? (
-            <p onClick={() => setPlay((prev) => !prev)}>
-              {players?.['player1']} {}
+            <p className='w-full  ' onClick={() => setPlay((prev) => !prev)}>
+              <span> {players?.['player1']}</span>
             </p>
           ) : (
             <input
@@ -64,11 +75,19 @@ const Settings = ({
         </div>
 
         <div className='flex items-center gap-2'>
-          <p onClick={() => setPlay((prev) => !prev)} className='w-20'>
-            Player 2 :
+          <p className='w-32 flex items-center gap-1'>
+            <span> Player 2</span>
+            <span className='flex items-center text-indigo-600 font-medium'>
+              {' ('}
+              <TbCircle />
+              {')'}
+            </span>{' '}
+            :
           </p>
           {play ? (
-            <p>{players?.['player2']}</p>
+            <p className='w-full ' onClick={() => setPlay((prev) => !prev)}>
+              <span> {players?.['player2']}</span>
+            </p>
           ) : (
             <input
               onChange={(e) => {
