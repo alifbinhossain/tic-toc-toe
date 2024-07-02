@@ -44,7 +44,7 @@ const Settings = ({
         </div>
 
         <div className='flex  items-center gap-2'>
-          <p className='w-40 flex items-center gap-1'>
+          <p className='w-48 flex items-center gap-1'>
             <span> Player 1</span>
             <span className='flex-1 flex items-center text-indigo-600 font-medium'>
               {' ('}
@@ -75,7 +75,7 @@ const Settings = ({
         </div>
 
         <div className='flex items-center gap-2'>
-          <p className='w-40 flex items-center gap-1'>
+          <p className='w-48 flex items-center gap-1'>
             <span> Player 2</span>
             <span className=' flex-1 flex items-center text-indigo-600 font-medium'>
               {' ('}
