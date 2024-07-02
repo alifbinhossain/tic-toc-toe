@@ -22,12 +22,12 @@ const Settings = ({
   setPlayers,
 }: IProps) => {
   return (
-    <div className=' rounded-md bg-white/20 flex-1 h-fit p-8 flex flex-col justify-between gap-20'>
+    <div className=' rounded-md bg-white/20 flex-1 h-fit p-4 md:p-8 flex flex-col justify-between gap-20 '>
       <div className='space-y-4'>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 w-full'>
           <p className='text-lg font-medium text-black'>Select Dimension :</p>
           <select
-            className='py-2 px-4 bg-white rounded-md '
+            className='py-2 px-4 bg-white rounded-md flex-1 max-w-[200px] '
             onChange={(e) => {
               reset();
               setDimension(Number(e.target.value));
@@ -58,7 +58,7 @@ const Settings = ({
               }}
               type='text'
               placeholder='Player 1'
-              className='px-4 py-2 bg-white rounded-md'
+              className='px-4 py-2 bg-white rounded-md flex-1 max-w-[200px]'
             />
           )}
         </div>
@@ -81,7 +81,7 @@ const Settings = ({
               }}
               type='text'
               placeholder='Player 2'
-              className='px-4 py-2 bg-white rounded-md'
+              className='px-4 py-2 bg-white rounded-md flex-1 max-w-[200px]'
             />
           )}
         </div>
