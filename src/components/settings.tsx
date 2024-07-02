@@ -46,7 +46,7 @@ const Settings = ({
         <div className='flex  items-center gap-2'>
           <p className='w-32 flex items-center gap-1'>
             <span> Player 1</span>
-            <span className='flex items-center text-indigo-600 font-medium'>
+            <span className='flex-1 flex items-center text-indigo-600 font-medium'>
               {' ('}
               <RxCross1 />
               {')'}
@@ -54,7 +54,7 @@ const Settings = ({
             :
           </p>
           {play ? (
-            <p className='w-full  ' onClick={() => setPlay((prev) => !prev)}>
+            <p className='flex-1' onClick={() => setPlay((prev) => !prev)}>
               <span> {players?.['player1']}</span>
             </p>
           ) : (
@@ -77,7 +77,7 @@ const Settings = ({
         <div className='flex items-center gap-2'>
           <p className='w-32 flex items-center gap-1'>
             <span> Player 2</span>
-            <span className='flex items-center text-indigo-600 font-medium'>
+            <span className=' flex-1 flex items-center text-indigo-600 font-medium'>
               {' ('}
               <TbCircle />
               {')'}
@@ -85,7 +85,7 @@ const Settings = ({
             :
           </p>
           {play ? (
-            <p className='w-full ' onClick={() => setPlay((prev) => !prev)}>
+            <p className='flex-1 ' onClick={() => setPlay((prev) => !prev)}>
               <span> {players?.['player2']}</span>
             </p>
           ) : (
